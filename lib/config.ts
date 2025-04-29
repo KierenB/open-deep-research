@@ -1,7 +1,7 @@
 export const CONFIG = {
   // Rate limits (requests per minute)
   rateLimits: {
-    enabled: true, // Flag to enable/disable rate limiting
+    enabled: false, // Flag to enable/disable rate limiting
     search: 10,
     contentFetch: 20,
     reportGeneration: 5,
@@ -23,7 +23,7 @@ export const CONFIG = {
   // AI Platform settings
   platforms: {
     google: {
-      enabled: true,
+      enabled: false,
       models: {
         'gemini-flash': {
           enabled: true,
@@ -40,7 +40,7 @@ export const CONFIG = {
       },
     },
     ollama: {
-      enabled: true,
+      enabled: false,
       models: {
         'deepseek-r1:1.5b': {
           enabled: false,
@@ -52,21 +52,33 @@ export const CONFIG = {
       enabled: true,
       models: {
         'gpt-4o': {
-          enabled: false,
+          enabled: true,
           label: 'GPT-4o',
         },
-        'o1-mini': {
-          enabled: false,
-          label: 'o1-mini',
+        'gpt-4o-mini': {
+          enabled: true,
+          label: 'GPT-4o-mini',
         },
-        o1: {
+        'gpt-4.1': {
+          enabled: true,
+          label: 'GPT-4.1',
+        },
+        'gpt-4.1-mini': {
+          enabled: true,
+          label: 'GPT-4.1-mini',
+        },
+        'o3-mini': {
+          enabled: false,
+          label: 'o3-mini',
+        },
+        'o1': {
           enabled: false,
           label: 'o1',
         },
       },
     },
     anthropic: {
-      enabled: true,
+      enabled: false,
       models: {
         'claude-3-7-sonnet-latest': {
           enabled: false,
@@ -79,7 +91,7 @@ export const CONFIG = {
       },
     },
     deepseek: {
-      enabled: true,
+      enabled: false,
       models: {
         chat: {
           enabled: false,
@@ -92,7 +104,7 @@ export const CONFIG = {
       },
     },
     openrouter: {
-      enabled: true,
+      enabled: false,
       models: {
         'openrouter/auto': {
           enabled: false,
